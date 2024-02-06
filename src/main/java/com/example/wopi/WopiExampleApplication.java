@@ -28,9 +28,9 @@ public class WopiExampleApplication {
         public String wopiFile(HttpServletRequest request, HttpServletResponse response) {
             return
                     "{" +
-                    "\"BaseFileName\":\"helloworld.odt\"," +
+                    "\"BaseFileName\":\"10w.xlsx\"," +
                     "\"OwnerId\":\"me\"," +
-                    "\"Size\":4445," +
+                    "\"Size\":12366377," +
                     "\"UserId\":\"me\"," +
                     "\"Version\":\"1\"," +
                     "\"UserCanWrite\":true," +
@@ -44,7 +44,7 @@ public class WopiExampleApplication {
 
         @RequestMapping(method=RequestMethod.GET, value="/wopi/files/{fileId}/contents")
         public byte[] getFileContent() throws FileNotFoundException, IOException {
-            return IOUtils.toByteArray(new FileInputStream("/Users/warrenpa/Downloads/helloworld.odt"));
+            return IOUtils.toByteArray(new FileInputStream("/front-end/10w.xlsx"));
         }
 
         @RequestMapping(method=RequestMethod.POST, value="/wopi/files/{fileId}/contents")
